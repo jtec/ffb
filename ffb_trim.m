@@ -27,6 +27,8 @@ for k = 1:length(uavsim.formation)
     uavsim.formation(k).u0.den     = u_trim(4);
     uavsim.formation(k).u0.df     = u_trim(5);
     uavsim.formation(k).u_trim     = u_trim;
+    uavsim.formation(k).x_trim     = x_trim;
+    uavsim.formation(k).y_trim     = y_trim;
     
     % Build linear models for controller synthesis etc.
     % Do a cached call to save time:
