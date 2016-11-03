@@ -34,7 +34,7 @@ if setup
     
     % Generate trajectorie(s):
     args = {};
-    args{end+1} = 100;
+    args{end+1} = 20;
     args{end+1} = uavsim;
     benchmarkTrajectory = cachedcall(@ffb_generatebenchmarkTrajectory,args);
     

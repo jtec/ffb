@@ -31,7 +31,7 @@ for k = 1:length(uavsim.formation)
     uavsim.formation(k).y_trim     = y_trim;
     
     % Build linear models for controller synthesis etc.
-    % Do a cached call to save time:
+    % Do a cached call to save time next time:
     args = {};
     args{end+1} = uavsim.cularis.trimmodel;
     args{end+1} = x_trim;

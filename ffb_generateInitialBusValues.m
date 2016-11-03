@@ -4,8 +4,18 @@
 %  in the MATLAB base workspace.
 % -------------------------------------------------------------------
 
+%% ------------------------------------------------------------------
+%  You can modify the values of the fields in VortexStates_MATLABStruct
+%  and evaluate this cell to create/update this structure
+%  in the MATLAB base workspace.
+% -------------------------------------------------------------------
+
 
 VortexStates_MATLABStruct = struct;
+VortexStates_MATLABStruct.pRear_b_m = ...
+[0; 0; 0];
+VortexStates_MATLABStruct.posFuselageBottom_b_m = ...
+[0; 0; 0];
 VortexStates_MATLABStruct.timeOfLastUpdate = 0;
 VortexStates_MATLABStruct.p_NED_m = ...
 [0; 0; 0];

@@ -46,10 +46,7 @@ lighting gouraud;
 return;
 
 %% Generate vortex measurements:
-ffb_vortexdiagnostic_par.S
-
-
-b = uavsim.cularis.b;
+ffb_vortexdiagnostic_par.b = uavsim.cularis.b;
 logindex = ceil(10/uavsim.simConfig.tsample_model);
 ffb_vortexdiagnostic_par.Cl = -(2*uavsim.formation(1).y_trim(24))/(1.225*15^2*uavsim.cularis.S);
 ffb_vortexdiagnostic_par.alpha = uavsim.cularis.alpha_trim;
@@ -79,7 +76,6 @@ for k=1:length(dp_w)
     dp_e(k, :) = DCM_ew * dp_w(k, :)';
 end
 ffb_vortexdiagnostic_par.v_NED = uavsim.formation(1).y_trim(14:16);
-
 
 % Generate timeseries for simulation:
 t = 0:uavsim.simConfig.tsample_model:(length(dp_w)-1)*uavsim.simConfig.tsample_model;
