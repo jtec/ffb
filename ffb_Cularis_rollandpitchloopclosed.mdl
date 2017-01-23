@@ -1,5 +1,5 @@
 Model {
-  Name			  "ffb_Cularis_openloop"
+  Name			  "ffb_Cularis_attitudeloopclosed"
   Version		  8.6
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
@@ -7,26 +7,26 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.10689"
+    ComputedModelVersion    "1.10698"
     NumModelReferences	    0
     NumTestPointedSignals   3
     TestPointedSignal {
       SignalName	      "u_c"
-      FullBlockPath	      "ffb_Cularis_openloop/UAV/u"
+      FullBlockPath	      "ffb_Cularis_attitudeloopclosed/UAV/u"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "airframebus"
-      FullBlockPath	      "ffb_Cularis_openloop/UAV/Cularis UAS"
+      FullBlockPath	      "ffb_Cularis_attitudeloopclosed/UAV/Cularis UAS"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "u_eff"
-      FullBlockPath	      "ffb_Cularis_openloop/UAV/Cularis UAS"
+      FullBlockPath	      "ffb_Cularis_attitudeloopclosed/UAV/Cularis UAS"
       PortIndex		      2
       LogSignal		      1
       MaxPoints		      5000
@@ -51,7 +51,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-1344.0, 0.0, 1000.0, 840.0]
+      Location		      [-1347.0, -3.0, 1350.0, 846.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -70,33 +70,24 @@ Model {
       }
       Array {
 	Type			"Simulink.EditorInfo"
-	Dimension		3
+	Dimension		2
 	Object {
 	  $ObjectID		  5
-	  IsActive		  [1]
+	  IsActive		  [0]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1200.0, 855.0]
+	  Extents		  [1637.0, 863.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [213.0, 241.46124750815886]
+	  Offset		  [445.84225962499249, 129.95779214940285]
 	}
 	Object {
 	  $ObjectID		  6
-	  IsActive		  [0]
+	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "7111"
-	  Extents		  [1200.0, 855.0]
-	  ZoomFactor		  [0.8]
-	  Offset		  [658.80000000000041, 55.133333333333269]
-	}
-	Object {
-	  $ObjectID		  7
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "7111:10816"
-	  Extents		  [1200.0, 855.0]
+	  LoadSaveID		  "7205"
+	  Extents		  [1637.0, 863.0]
 	  ZoomFactor		  [1.0]
-	  Offset		  [-270.319755010592, -20.800000000000011]
+	  Offset		  [0.0, 0.0]
 	}
 	PropName		"EditorsInfo"
       }
@@ -108,9 +99,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "j.bolting"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jan 23 14:57:43 2017"
-  RTWModifiedTimeStamp	  407084137
-  ModelVersionFormat	  "1.%<AutoIncrement:10689>"
+  LastModifiedDate	  "Mon Jan 23 15:15:02 2017"
+  RTWModifiedTimeStamp	  407085301
+  ModelVersionFormat	  "1.%<AutoIncrement:10698>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -152,7 +143,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    8
+    $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "ffb_Cularis_server_smc"
     overrideMode_	    [0.0]
@@ -196,13 +187,13 @@ Model {
     Type		    "Handle"
     Dimension		    4
     Simulink.ConfigSet {
-      $ObjectID		      9
+      $ObjectID		      8
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  10
+	  $ObjectID		  9
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "20"
@@ -239,7 +230,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  11
+	  $ObjectID		  10
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -275,7 +266,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  12
+	  $ObjectID		  11
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -332,7 +323,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  13
+	  $ObjectID		  12
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -422,7 +413,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  14
+	  $ObjectID		  13
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -462,7 +453,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  15
+	  $ObjectID		  14
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -478,7 +469,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  16
+	  $ObjectID		  15
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -490,7 +481,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  17
+	  $ObjectID		  16
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -561,7 +552,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      18
+	      $ObjectID		      17
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -631,7 +622,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      19
+	      $ObjectID		      18
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -718,7 +709,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  20
+	  $ObjectID		  19
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -745,7 +736,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  21
+	  $ObjectID		  20
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -757,7 +748,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      22
+	      $ObjectID		      21
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -790,14 +781,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      23
+	      $ObjectID		      22
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  24
+		  $ObjectID		  23
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -812,7 +803,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  25
+		  $ObjectID		  24
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -843,13 +834,13 @@ Model {
       ConfigPrmDlgPosition     [ 420, 24, 1532, 904 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      26
+      $ObjectID		      25
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  27
+	  $ObjectID		  26
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "25"
@@ -886,7 +877,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  28
+	  $ObjectID		  27
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -922,7 +913,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  29
+	  $ObjectID		  28
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -979,7 +970,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  30
+	  $ObjectID		  29
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1069,7 +1060,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  31
+	  $ObjectID		  30
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1109,7 +1100,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  32
+	  $ObjectID		  31
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -1125,7 +1116,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  33
+	  $ObjectID		  32
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -1137,7 +1128,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  34
+	  $ObjectID		  33
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1208,7 +1199,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      35
+	      $ObjectID		      34
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -1278,7 +1269,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      36
+	      $ObjectID		      35
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -1365,7 +1356,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  37
+	  $ObjectID		  36
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -1392,7 +1383,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  38
+	  $ObjectID		  37
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1404,7 +1395,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      39
+	      $ObjectID		      38
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -1437,14 +1428,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      40
+	      $ObjectID		      39
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  41
+		  $ObjectID		  40
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -1459,7 +1450,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  42
+		  $ObjectID		  41
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -1490,13 +1481,13 @@ Model {
       ConfigPrmDlgPosition     [ 420, 24, 1532, 904 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      43
+      $ObjectID		      42
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  44
+	  $ObjectID		  43
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "100"
@@ -1533,7 +1524,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  45
+	  $ObjectID		  44
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -1569,7 +1560,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  46
+	  $ObjectID		  45
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1626,7 +1617,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  47
+	  $ObjectID		  46
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1716,7 +1707,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  48
+	  $ObjectID		  47
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1756,7 +1747,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  49
+	  $ObjectID		  48
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -1772,7 +1763,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  50
+	  $ObjectID		  49
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -1784,7 +1775,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  51
+	  $ObjectID		  50
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1856,7 +1847,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      52
+	      $ObjectID		      51
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -1928,7 +1919,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      53
+	      $ObjectID		      52
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -2015,7 +2006,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  54
+	  $ObjectID		  53
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -2042,7 +2033,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  55
+	  $ObjectID		  54
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2054,7 +2045,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      56
+	      $ObjectID		      55
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -2087,14 +2078,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      57
+	      $ObjectID		      56
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  58
+		  $ObjectID		  57
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -2109,7 +2100,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  59
+		  $ObjectID		  58
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -2141,13 +2132,13 @@ Model {
       ConfigPrmDlgPosition     [ 291, 102, 1377, 794 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      60
+      $ObjectID		      59
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  61
+	  $ObjectID		  60
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "uavsim.simConfig.tsim"
@@ -2184,7 +2175,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  62
+	  $ObjectID		  61
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -2220,7 +2211,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  63
+	  $ObjectID		  62
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2277,7 +2268,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  64
+	  $ObjectID		  63
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -2367,7 +2358,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  65
+	  $ObjectID		  64
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -2407,7 +2398,7 @@ Model {
 	  ProdEqTarget		  off
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  66
+	  $ObjectID		  65
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -2423,7 +2414,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  67
+	  $ObjectID		  66
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -2435,7 +2426,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  68
+	  $ObjectID		  67
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2504,7 +2495,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      69
+	      $ObjectID		      68
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -2579,7 +2570,7 @@ Model {
 	    }
 	    Simulink.RaccelTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      70
+	      $ObjectID		      69
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -2664,7 +2655,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  71
+	  $ObjectID		  70
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -2691,7 +2682,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  72
+	  $ObjectID		  71
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2703,7 +2694,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      73
+	      $ObjectID		      72
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -2736,14 +2727,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      74
+	      $ObjectID		      73
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  75
+		  $ObjectID		  74
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -2758,7 +2749,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  76
+		  $ObjectID		  75
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -2793,11 +2784,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    60
+    $ObjectID		    59
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    77
+    $ObjectID		    76
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -2865,6 +2856,11 @@ Model {
       NonVirtualBus	      off
     }
     Block {
+      BlockType		      BusSelector
+      OutputSignals	      "signal1,signal2,signal3"
+      OutputAsBus	      off
+    }
+    Block {
       BlockType		      Constant
       Value		      "1"
       VectorParams1D	      on
@@ -2877,10 +2873,206 @@ Model {
       FramePeriod	      "inf"
       PreserveConstantTs      off
     }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      WrapState		      off
+      WrappedStateUpperValue  "pi"
+      WrappedStateLowerValue  "-pi"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      Scope
+      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
+      NumInputPorts	      "1"
+      Floating		      off
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Step
+      Time		      "1"
+      Before		      "0"
+      After		      "1"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
+      GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
+      IsWebBlock	      off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Trigonometry
+      Operator		      "sin"
+      ApproximationMethod     "None"
+      NumberOfIterations      "11"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ZeroOrderHold
+      SampleTime	      "1"
+    }
   }
   System {
-    Name		    "ffb_Cularis_openloop"
-    Location		    [-1344, 0, -344, 840]
+    Name		    "ffb_Cularis_attitudeloopclosed"
+    Location		    [-1347, -3, 3, 843]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -2894,245 +3086,1784 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "7117"
+    SIDHighWatermark	    "7497"
     Block {
-      BlockType		      BusCreator
-      Name		      "Bus Object Bus Creator"
-      SID		      "7112"
-      Ports		      [5, 1]
-      Position		      [665, 349, 700, 641]
-      ZOrder		      2003
-      ShowName		      off
-      AttributesFormatString  "%<OutDataTypeStr>"
-      CopyFcn		      "set_param(gcb, 'LinkStatus', 'none')"
-      Inputs		      "5"
-      DisplayOption	      "bar"
-      OutDataTypeStr	      "Bus: CMD"
-      NonVirtualBus	      on
-      InheritFromInputs	      on
-      Object {
-	$PropName		"MaskObject"
-	$ObjectID		78
-	$ClassName		"Simulink.Mask"
-	Type			"BUS OBJECT Bus Creator"
-	Description		"Provides users the cabability to painlessly, instantly customize bus creators of output data type 'Bus:"
-	"' by selecting the bus object type from a drop down menu dynamically populated by bus objects in the workspace. \n\nA"
-	"fter pressing the \"Apply Selection\" button signal lines into the creator are populated and named with the elements "
-	"in the chosen bus saving the user from having to recall and fill out signal line names.\n\nNOTE that when copying a B"
-	"us Object Bus Creator from your locked Library the link to the Library is automatically broken. This saves the user f"
-	"rom having to Unlock Links To Library (From the Library menu.), Disable Link and finally Break Link (Both from the Mo"
-	"del menu.) for every placed instance of the block."
-	Object {
-	  $PropName		  "Parameters"
-	  $ObjectID		  79
-	  $ClassName		  "Simulink.MaskParameter"
-	  Type			  "popup"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    35
-	    Cell		    "Bus: AHRS"
-	    Cell		    "Bus: Acceleration"
-	    Cell		    "Bus: Aero"
-	    Cell		    "Bus: Airdata"
-	    Cell		    "Bus: Airframe"
-	    Cell		    "Bus: Attitude"
-	    Cell		    "Bus: CMD"
-	    Cell		    "Bus: ControlInfoBus"
-	    Cell		    "Bus: Dx"
-	    Cell		    "Bus: Enginedata"
-	    Cell		    "Bus: Environment"
-	    Cell		    "Bus: FlightGearData"
-	    Cell		    "Bus: GCSUpstream"
-	    Cell		    "Bus: GNSSL1"
-	    Cell		    "Bus: GNSSRTK"
-	    Cell		    "Bus: GPS"
-	    Cell		    "Bus: IMU"
-	    Cell		    "Bus: Kinematics"
-	    Cell		    "Bus: LandinggearInput"
-	    Cell		    "Bus: MotionTracker"
-	    Cell		    "Bus: Position"
-	    Cell		    "Bus: Radiodistance"
-	    Cell		    "Bus: RotationalAcceleration"
-	    Cell		    "Bus: RotationalVelocity"
-	    Cell		    "Bus: SensorBus"
-	    Cell		    "Bus: StateBus"
-	    Cell		    "Bus: Velocity"
-	    Cell		    "Bus: VortexParameterBus"
-	    Cell		    "Bus: VortexStates"
-	    Cell		    "Bus: WindAngles"
-	    Cell		    "Bus: iUAScom"
-	    Cell		    "Bus: svm_bus_d_exo"
-	    Cell		    "Bus: svm_bus_u"
-	    Cell		    "Bus: svm_bus_x"
-	    Cell		    "Bus: svm_bus_xi"
-	    PropName		    "TypeOptions"
-	  }
-	  Name			  "busType"
-	  Prompt		  "Bus Type"
-	  Value			  "Bus: CMD"
-	  Tunable		  "off"
-	  Callback		  "% Using variable names terminated with \"_BOBC\" to lessen the chances of\n% collisions with existing "
-	  "workspace variables.\n\n% Get the current block handle and mask handle.\nhandleCreator_BOBC = gcbh;\nmaskObj_BOBC  "
-	  "     = Simulink.Mask.get(gcb);\n\n% Get a list of variables in the workspace in order to search for the '1x1\n% Bus"
-	  "' types.\nwsVars_BOBC = whos;\n\n% Reset the 'TypeOptions' bus list in case some '1x1 Bus' types have been\n% delet"
-	  "ed from or added to the workspace.\nmaskObj_BOBC.Parameters.TypeOptions = {'<empty>'};\n\n% Reset the bus count.\nb"
-	  "usCount_BOBC = 0;\n\nfor index_BOBC = 1:length(wsVars_BOBC)\n\n   % If the variable is a bus object...\n   if strcm"
-	  "p(wsVars_BOBC(index_BOBC).class, 'Simulink.Bus')\n\n      busCount_BOBC = busCount_BOBC + 1;\n\n      % ... add it "
-	  "to the TypeOptions of the mask.\n      maskObj_BOBC.Parameters.TypeOptions(busCount_BOBC) = ...\n                  "
-	  "                                         ...\n                                 {['Bus: ', wsVars_BOBC(index_BOBC).n"
-	  "ame]};\n   end\nend\n\nif busCount_BOBC == 0\n\n   % If there are NO bus objects in the workspace then provide a wa"
-	  "rning\n   % popup...\n   warndlg('There are currently no bus objects in the workspace - you have no use for this bl"
-	  "ock. Use a normal Bus Creator instead.')\n\n   % ... and do nothing.\nelseif ~strcmp(get_param(handleCreator_BOBC, "
-	  "'OutDataTypeStr'), 'Inherit: auto')\n\n   % If the currently selected bus data type ('OutDataTypeStr') is not\n   %"
-	  " 'Inherit: auto' (i.e., if we are reopening the mask.) then get the\n   % current 'OutDataTypeStr' and 'maskVal.' ("
-	  "'maskVal' is the selected\n   % 'TypeOptions' list member.)\n   outDatStr_BOBC = get_param(handleCreator_BOBC, 'Out"
-	  "DataTypeStr');\n   maskVal_BOBC   = get_param(handleCreator_BOBC, 'MaskValues');\n\n   if ~strcmp(outDatStr_BOBC, m"
-	  "askVal_BOBC{1})\n\n      % Upon re-opening the mask if the default 'TypeOptions' list member\n      % (The first on"
-	  "e.) contained in 'maskVal' does not match the\n      % currently selected bus data type ('OutDataTypeStr') then set"
-	  " the\n      % 'TypeOptions' list member to the selected bus data type. (Cuts down\n      % on confusion to have the"
-	  " displayed list member match the selected\n      % bus data type rather than the first entry.)\n      set_param(han"
-	  "dleCreator_BOBC, 'MaskValues', {outDatStr_BOBC});\n   end\nend\n\n% Clean up the workspace.\nclear  handleCreator_B"
-	  "OBC  maskObj_BOBC     wsVars_BOBC ...\n            busCount_BOBC    index_BOBC  outDatStr_BOBC ...\n             ma"
-	  "skVal_BOBC"
-	}
-	Array {
-	  Type			  "Simulink.dialog.Group"
-	  Dimension		  2
-	  Object {
-	    $ObjectID		    80
-	    Prompt		    "%<MaskType>"
-	    Object {
-	      $PropName		      "DialogControls"
-	      $ObjectID		      81
-	      $ClassName	      "Simulink.dialog.Text"
-	      Prompt		      "%<MaskDescription>"
-	      Name		      "DescTextVar"
-	    }
-	    Name		    "DescGroupVar"
-	  }
-	  Object {
-	    $ObjectID		    82
-	    Prompt		    "Simulink:studio:ToolBarParametersMenu"
-	    Array {
-	      Type		      "Simulink.dialog.Control"
-	      Dimension		      2
-	      Object {
-		$ObjectID		83
-		$ClassName		"Simulink.dialog.parameter.Popup"
-		Name			"busType"
-	      }
-	      Object {
-		$ObjectID		84
-		$ClassName		"Simulink.dialog.Button"
-		Prompt			"Apply Selection"
-		Callback		"% Using variable names terminated with \"_BOBC\" to lessen the chances of\n% collisions with existing wor"
-		"kspace variables.\n\n% Get the current block, current block handle and mask handle.\ncurrentBlock_BOBC  = gcb;\nhand"
-		"leCreator_BOBC = gcbh;\n\n% Get the desired bus type...\ndesiredBusType_BOBC = get_param(handleCreator_BOBC, 'busTyp"
-		"e');\n\n% ... and set the 'OutDataTypeStr' to it.\nset_param(handleCreator_BOBC, 'OutDataTypeStr', desiredBusType_BO"
-		"BC);\n\n%% First delete any existing lines on the port.\n% Get the line handles.\nlh_BOBC = get_param(handleCreator_"
-		"BOBC, 'LineHandles');\n\n% If any lines exist (Non- -1 line handles.), delete them and start over.\nif max(lh_BOBC.I"
-		"nport > 0)\n\n   for index_BOBC = 1:length(lh_BOBC.Inport)\n\n      if lh_BOBC.Inport(index_BOBC) > 0\n\n         de"
-		"lete_line(lh_BOBC.Inport(index_BOBC))\n      end\n   end\nend\n\n%% Then work on adding new lines.\n\n% Get the bloc"
-		"k path for 'add_line' function.\nblockPath_BOBC = get_param(handleCreator_BOBC, 'Parent');\n\n% Get the newly select"
-		"ed bus type ('OutDataTypeStr')...\nmocbBusType_BOBC = get_param(currentBlock_BOBC, 'OutDataTypeStr');\n\n% ... and p"
-		"arse off \"Bus: \" so the string of the desired bus contained in\n% 'OutDataTypeStr' matches the raw workspace bus n"
-		"ames.\nmocbBusType_BOBC = mocbBusType_BOBC(6:end);\n\n% Then evaluate the string containing the workspace bus name w"
-		"hich will\n% load the desired bus parameters.\nbusParams_BOBC = eval(mocbBusType_BOBC);\n\n% From the parameters gra"
-		"b the number of lines to add.\nnumLines_BOBC = length(busParams_BOBC.Elements);\n\n% Set the number of inputs of the"
-		" masked bus creator to the number of lines\n% to add.\nset_param(handleCreator_BOBC, 'Inputs', num2str(numLines_BOBC"
-		"));\n\n% Get (Inputs.) port handles so we can grab the positions of them.\nph_BOBC = get_param(handleCreator_BOBC, '"
-		"PortHandles');\n\nfor index_BOBC = 1:numLines_BOBC\n\n   % Get the position of input port number 'index_BOBC'.\n   p"
-		"ortPos_BOBC = get_param(ph_BOBC.Inport(index_BOBC), 'Position');\n\n   % Add a line from 50 pixels left of the port "
-		"position to the port\n   % position. (This must be done because it's the lines that get named,\n   % not the port po"
-		"sitions.)\n   portLine_BOBC = add_line(blockPath_BOBC, [portPos_BOBC - [50 0]; portPos_BOBC]);\n\n   % Rename the ne"
-		"w line to the bus 'index_BOBC-st/nd/rd/th' element name.\n   set_param(portLine_BOBC, 'Name', busParams_BOBC.Element"
-		"s(index_BOBC).Name)\nend\n\n%% Cleanup the workspace.\nclear    currentBlock_BOBC  handleCreator_BOBC      index_BOB"
-		"C ...\n       desiredBusType_BOBC             lh_BOBC  blockPath_BOBC ...\n          mocbBusType_BOBC      busParams"
-		"_BOBC   numLines_BOBC ...\n                   ph_BOBC        portPos_BOBC   portLine_BOBC"
-		Row			"current"
-		Name			"applyMOCBSelection"
-	      }
-	      PropName		      "DialogControls"
-	    }
-	    Name		    "ParameterGroupVar"
-	  }
-	  PropName		  "DialogControls"
-	}
-      }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant"
+      BlockType		      SubSystem
+      Name		      "Controllers"
       SID		      "7113"
-      Position		      [470, 360, 580, 390]
-      ZOrder		      2004
-      ShowName		      off
-      Value		      "uavsim.cularis.u0.da"
+      Ports		      [1, 1]
+      Position		      [705, 487, 835, 603]
+      ZOrder		      2002
+      RequestExecContextInheritance off
+      Variant		      off
       Port {
 	PortNumber		1
-	Name			"da_rad"
+	Name			"u_c"
 	RTWStorageClass		"Auto"
 	DataLoggingNameMode	"SignalName"
       }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant1"
-      SID		      "7114"
-      Position		      [470, 420, 580, 450]
-      ZOrder		      2005
-      ShowName		      off
-      Value		      "uavsim.cularis.u0.de"
-      Port {
-	PortNumber		1
-	Name			"de_rad"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant2"
-      SID		      "7115"
-      Position		      [470, 480, 580, 510]
-      ZOrder		      2006
-      ShowName		      off
-      Value		      "uavsim.cularis.u0.dr"
-      Port {
-	PortNumber		1
-	Name			"dr_rad"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant3"
-      SID		      "7116"
-      Position		      [470, 540, 580, 570]
-      ZOrder		      2007
-      ShowName		      off
-      Value		      "uavsim.cularis.u0.den"
-      Port {
-	PortNumber		1
-	Name			"den_0to1"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
-      }
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Constant4"
-      SID		      "7117"
-      Position		      [470, 600, 580, 630]
-      ZOrder		      2008
-      ShowName		      off
-      Value		      "uavsim.cularis.u0.df"
-      Port {
-	PortNumber		1
-	Name			"df_rad"
-	RTWStorageClass		"Auto"
-	DataLoggingNameMode	"SignalName"
+      System {
+	Name			"Controllers"
+	Location		[-1347, -3, 3, 843]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "AirframeBus"
+	  SID			  "7114"
+	  Position		  [1150, 318, 1180, 332]
+	  ZOrder		  2022
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Attitude laws"
+	  SID			  "7118"
+	  Ports			  [3, 1]
+	  Position		  [1660, 296, 1755, 454]
+	  ZOrder		  1989
+	  ForegroundColor	  "red"
+	  BackgroundColor	  "yellow"
+	  SystemSampleTime	  "uavsim.ap.hardware.dt_attitudeloops_s"
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "Attitude laws"
+	    Location		    [-1347, -3, 3, 843]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Plant"
+	      SID		      "7119"
+	      Position		      [1180, 908, 1210, 922]
+	      ZOrder		      1274
+	      IconDisplay	      "Port number"
+	      OutDataTypeStr	      "Bus: Airframe"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "q_c"
+	      SID		      "7120"
+	      Position		      [1180, 968, 1210, 982]
+	      ZOrder		      1280
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "delta_en"
+	      SID		      "7121"
+	      Position		      [1140, 1118, 1170, 1132]
+	      ZOrder		      1282
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "7122"
+	      Ports		      [2, 1]
+	      Position		      [1880, 857, 1920, 948]
+	      ZOrder		      1278
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add1"
+	      SID		      "7123"
+	      Ports		      [2, 1]
+	      Position		      [1720, 937, 1750, 968]
+	      ZOrder		      1287
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      BusCreator
+	      Name		      "Bus\nCreator2"
+	      SID		      "7124"
+	      Ports		      [5, 1]
+	      Position		      [2150, 748, 2160, 1142]
+	      ZOrder		      1275
+	      ShowName		      off
+	      Inputs		      "5"
+	      DisplayOption	      "bar"
+	      OutDataTypeStr	      "Bus: CMD"
+	      NonVirtualBus	      on
+	      InheritFromInputs	      on
+	      Port {
+		PortNumber		1
+		Name			"CMD"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "7125"
+	      Position		      [1180, 1072, 1255, 1098]
+	      ZOrder		      1289
+	      ShowName		      off
+	      Value		      "zeros(3,1)"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "7126"
+	      Ports		      [1, 4]
+	      Position		      [1950, 746, 1960, 1064]
+	      ZOrder		      1277
+	      ShowName		      off
+	      DisplayOption	      "bar"
+	      Port {
+		PortNumber		1
+		Name			"da_rad"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"de_rad"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"dr_rad"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"den_0to1"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      SID		      "7127"
+	      Ports		      [1, 4]
+	      Position		      [1705, 821, 1730, 914]
+	      ZOrder		      1448
+	      ShowName		      off
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Local rotation angle attitude \ncontrol"
+	      SID		      "7128"
+	      Ports		      [2, 1]
+	      Position		      [1255, 884, 1350, 1006]
+	      ZOrder		      1283
+	      RequestExecContextInheritance off
+	      Variant		      off
+	      System {
+		Name			"Local rotation angle attitude \ncontrol"
+		Location		[-1347, -3, 3, 843]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "AirframeBus"
+		  SID			  "7129"
+		  Position		  [75, 188, 105, 202]
+		  ZOrder		  812
+		  IconDisplay		  "Port number"
+		  OutDataTypeStr	  "Bus: Airframe"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "q_c"
+		  SID			  "7130"
+		  Position		  [325, 363, 355, 377]
+		  ZOrder		  1112
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  BusSelector
+		  Name			  "Bus\nSelector"
+		  SID			  "7131"
+		  Ports			  [1, 2]
+		  Position		  [460, 131, 490, 169]
+		  ZOrder		  1443
+		  ShowName		  off
+		  OutputSignals		  "Kinematics.RotationalVelocity.omega_b_rps,Kinematics.Attitude.euler_rad"
+		  Port {
+		    PortNumber		    1
+		    Name		    "<omega_b_rps>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "<euler_rad>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Compute local theta, phi, n_z"
+		  SID			  "7132"
+		  Ports			  [2, 1]
+		  Position		  [390, 272, 490, 403]
+		  ZOrder		  1389
+		  RequestExecContextInheritance	off
+		  Variant		  off
+		  System {
+		    Name		    "Compute local theta, phi, n_z"
+		    Location		    [-1347, -3, 3, 843]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "AirframeBus"
+		    SID			    "7133"
+		    Position		    [-25, 705, 5, 725]
+		    ZOrder		    1401
+		    IconDisplay		    "Port number"
+		    OutDataTypeStr	    "Bus: Airframe"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "q_c"
+		    SID			    "7134"
+		    Position		    [320, 748, 350, 762]
+		    ZOrder		    1402
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus Selector"
+		    SID			    "7135"
+		    Ports		    [1, 1]
+		    Position		    [35, 684, 70, 746]
+		    ZOrder		    1396
+		    ShowName		    off
+		    OutputSignals	    "Kinematics.Attitude.DCM_be"
+		    Port {
+		    PortNumber		    1
+		    Name		    "<DCM_be>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "Constant1"
+		    SID			    "7136"
+		    Position		    [1225, 740, 1265, 770]
+		    ZOrder		    1420
+		    ShowName		    off
+		    Value		    "[0 0 0]"
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Direction Cosine Matrix \nto Quaternions"
+		    SID			    "7137"
+		    Ports		    [1, 1]
+		    Position		    [190, 690, 255, 740]
+		    ZOrder		    1501
+		    LibraryVersion	    "1.436"
+		    SourceBlock		    "aerolibtransform2/Direction Cosine Matrix \nto Quaternions"
+		    SourceType		    "DCM2Quaternion"
+		    ContentPreviewEnabled   off
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain"
+		    SID			    "7138"
+		    Position		    [1010, 715, 1040, 745]
+		    ZOrder		    1410
+		    ShowName		    off
+		    Gain		    "2"
+		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "alpha_corr"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain1"
+		    SID			    "7139"
+		    Position		    [1560, 705, 1590, 735]
+		    ZOrder		    1463
+		    ShowName		    off
+		    Gain		    "-2"
+		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "theta_local, phi_local"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "Gain2"
+		    SID			    "7140"
+		    Position		    [525, 715, 555, 745]
+		    ZOrder		    1489
+		    Gain		    "-1"
+		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "If alpha_corr approaches zero, \nq_e approaches 1 and c goes to infinity. \nIn that case, just replac"
+		    "e the computed \ncorrection angles by zeros"
+		    SID			    "7141"
+		    Position		    [1295, 667, 1410, 773]
+		    ZOrder		    1419
+		    Criteria		    "u2 ~= 0"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Quaternion Conjugate"
+		    SID			    "7142"
+		    Ports		    [1, 1]
+		    Position		    [290, 700, 325, 730]
+		    ZOrder		    1423
+		    ShowName		    off
+		    LibraryVersion	    "1.100"
+		    SourceBlock		    "aerolibutil/Quaternion\nConjugate"
+		    SourceType		    "Quaternion Conjugate"
+		    ContentPreviewEnabled   off
+		    }
+		    Block {
+		    BlockType		    Reference
+		    Name		    "Quaternion Multiplication - \ncompute error quaternion"
+		    SID			    "7143"
+		    Ports		    [2, 1]
+		    Position		    [400, 708, 455, 752]
+		    ZOrder		    1405
+		    LibraryVersion	    "1.100"
+		    SourceBlock		    "aerolibutil/Quaternion\nMultiplication"
+		    SourceType		    "Quaternion Multiplication"
+		    ContentPreviewEnabled   off
+		    Port {
+		    PortNumber		    1
+		    Name		    "q_corr"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Trigonometry
+		    Name		    "Trigonometric Function"
+		    SID			    "7144"
+		    Ports		    [1, 1]
+		    Position		    [950, 715, 980, 745]
+		    ZOrder		    1409
+		    ShowName		    off
+		    Operator		    "acos"
+		    }
+		    Block {
+		    BlockType		    Trigonometry
+		    Name		    "Trigonometric Function1"
+		    SID			    "7145"
+		    Ports		    [1, 1]
+		    Position		    [1015, 780, 1045, 810]
+		    ZOrder		    1465
+		    ShowName		    off
+		    Operator		    "asin"
+		    }
+		    Block {
+		    BlockType		    Switch
+		    Name		    "choose the shorter \nrotation"
+		    SID			    "7146"
+		    Position		    [675, 707, 735, 813]
+		    ZOrder		    1488
+		    Criteria		    "u2 > Threshold"
+		    InputSameDT		    off
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "q_corr"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Selector
+		    Name		    "get qw"
+		    SID			    "7147"
+		    Ports		    [1, 1]
+		    Position		    [870, 711, 910, 749]
+		    ZOrder		    1408
+		    InputPortWidth	    "4"
+		    IndexOptions	    "Index vector (dialog)"
+		    Indices		    "1"
+		    OutputSizes		    "1"
+		    }
+		    Block {
+		    BlockType		    Selector
+		    Name		    "get qw1"
+		    SID			    "7148"
+		    Ports		    [1, 1]
+		    Position		    [595, 741, 635, 779]
+		    ZOrder		    1490
+		    InputPortWidth	    "4"
+		    IndexOptions	    "Index vector (dialog)"
+		    Indices		    "1"
+		    OutputSizes		    "1"
+		    }
+		    Block {
+		    BlockType		    Selector
+		    Name		    "get qx, qy, qz"
+		    SID			    "7149"
+		    Ports		    [1, 1]
+		    Position		    [855, 776, 895, 814]
+		    ZOrder		    1411
+		    InputPortWidth	    "4"
+		    IndexOptions	    "Index vector (dialog)"
+		    Indices		    "2:4"
+		    OutputSizes		    "1"
+		    }
+		    Block {
+		    BlockType		    Selector
+		    Name		    "get theta, phi1"
+		    SID			    "7150"
+		    Ports		    [1, 1]
+		    Position		    [1465, 701, 1505, 739]
+		    ZOrder		    1421
+		    InputPortWidth	    "3"
+		    IndexOptions	    "Index vector (dialog)"
+		    Indices		    "[2 1]"
+		    OutputSizes		    "1"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "theta, phi local"
+		    SID			    "7151"
+		    Position		    [1635, 713, 1665, 727]
+		    ZOrder		    1375
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "AirframeBus"
+		    SrcPort		    1
+		    DstBlock		    "Bus Selector"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<DCM_be>"
+		    ZOrder		    2
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus Selector"
+		    SrcPort		    1
+		    DstBlock		    "Direction Cosine Matrix \nto Quaternions"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    3
+		    SrcBlock		    "q_c"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -15]
+		    DstBlock		    "Quaternion Multiplication - \ncompute error quaternion"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "q_corr"
+		    ZOrder		    4
+		    SrcBlock		    "choose the shorter \nrotation"
+		    SrcPort		    1
+		    Points		    [97, 0]
+		    Branch {
+		    ZOrder		    5
+		    Points		    [0, -30]
+		    DstBlock		    "get qw"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    6
+		    Labels		    [-1, 0]
+		    Points		    [0, 35]
+		    DstBlock		    "get qx, qy, qz"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    ZOrder		    7
+		    SrcBlock		    "get qw"
+		    SrcPort		    1
+		    DstBlock		    "Trigonometric Function"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    "Trigonometric Function"
+		    SrcPort		    1
+		    DstBlock		    "Gain"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "alpha_corr"
+		    ZOrder		    9
+		    Labels		    [1, 0]
+		    SrcBlock		    "Gain"
+		    SrcPort		    1
+		    Points		    [30, 0; 0, -10]
+		    DstBlock		    "If alpha_corr approaches zero, \nq_e approaches 1 and c goes to infinity. \nIn that case, just re"
+		    "place the computed \ncorrection angles by zeros"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "get qx, qy, qz"
+		    SrcPort		    1
+		    DstBlock		    "Trigonometric Function1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "Trigonometric Function1"
+		    SrcPort		    1
+		    Points		    [85, 0; 0, -88; 120, 0; 0, -22]
+		    DstBlock		    "If alpha_corr approaches zero, \nq_e approaches 1 and c goes to infinity. \nIn that case, just re"
+		    "place the computed \ncorrection angles by zeros"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Constant1"
+		    SrcPort		    1
+		    DstBlock		    "If alpha_corr approaches zero, \nq_e approaches 1 and c goes to infinity. \nIn that case, just re"
+		    "place the computed \ncorrection angles by zeros"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    13
+		    SrcBlock		    "If alpha_corr approaches zero, \nq_e approaches 1 and c goes to infinity. \nIn that case, just re"
+		    "place the computed \ncorrection angles by zeros"
+		    SrcPort		    1
+		    DstBlock		    "get theta, phi1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    14
+		    SrcBlock		    "get theta, phi1"
+		    SrcPort		    1
+		    DstBlock		    "Gain1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    15
+		    SrcBlock		    "Quaternion Conjugate"
+		    SrcPort		    1
+		    Points		    [33, 0; 0, 5]
+		    DstBlock		    "Quaternion Multiplication - \ncompute error quaternion"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "theta_local, phi_local"
+		    ZOrder		    16
+		    Labels		    [0, 0]
+		    SrcBlock		    "Gain1"
+		    SrcPort		    1
+		    DstBlock		    "theta, phi local"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "q_corr"
+		    ZOrder		    17
+		    SrcBlock		    "Quaternion Multiplication - \ncompute error quaternion"
+		    SrcPort		    1
+		    Points		    [43, 0]
+		    Branch {
+		    ZOrder		    18
+		    Labels		    [2, 0]
+		    Points		    [0, 65]
+		    DstBlock		    "choose the shorter \nrotation"
+		    DstPort		    3
+		    }
+		    Branch {
+		    ZOrder		    19
+		    DstBlock		    "Gain2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    ZOrder		    20
+		    SrcBlock		    "Gain2"
+		    SrcPort		    1
+		    Points		    [0, 0]
+		    Branch {
+		    ZOrder		    21
+		    Points		    [0, -5]
+		    DstBlock		    "choose the shorter \nrotation"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    22
+		    Points		    [0, 30]
+		    DstBlock		    "get qw1"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    ZOrder		    23
+		    SrcBlock		    "get qw1"
+		    SrcPort		    1
+		    DstBlock		    "choose the shorter \nrotation"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    24
+		    SrcBlock		    "Direction Cosine Matrix \nto Quaternions"
+		    SrcPort		    1
+		    DstBlock		    "Quaternion Conjugate"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  SID			  "7152"
+		  Position		  [475, -10, 535, 20]
+		  ZOrder		  1774
+		  Value			  "[0 0]'"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux1"
+		  SID			  "7497"
+		  Ports			  [1, 2]
+		  Position		  [585, 328, 600, 372]
+		  ZOrder		  1781
+		  ShowName		  off
+		  Outputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux4"
+		  SID			  "7155"
+		  Ports			  [1, 3]
+		  Position		  [585, 118, 600, 162]
+		  ZOrder		  1770
+		  ShowName		  off
+		  Outputs		  "3"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux5"
+		  SID			  "7156"
+		  Ports			  [1, 2]
+		  Position		  [580, -14, 600, 24]
+		  ZOrder		  1771
+		  ShowName		  off
+		  Outputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Ground
+		  Name			  "Ground1"
+		  SID			  "7157"
+		  Position		  [1255, 270, 1275, 290]
+		  ZOrder		  1121
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "LQR pitch"
+		  SID			  "7205"
+		  Ports			  [3, 1]
+		  Position		  [905, 187, 1110, 333]
+		  ZOrder		  1773
+		  RequestExecContextInheritance	off
+		  Variant		  off
+		  System {
+		    Name		    "LQR pitch"
+		    Location		    [-1347, -3, 3, 843]
+		    Open		    on
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "q"
+		    SID			    "7206"
+		    Position		    [535, 363, 565, 377]
+		    ZOrder		    1380
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "theta"
+		    SID			    "7207"
+		    Position		    [345, 348, 375, 362]
+		    ZOrder		    -1
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "theta_c"
+		    SID			    "7208"
+		    Position		    [270, 313, 300, 327]
+		    ZOrder		    1379
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add1"
+		    SID			    "7209"
+		    Ports		    [2, 1]
+		    Position		    [410, 304, 440, 371]
+		    ZOrder		    1382
+		    ShowName		    off
+		    Inputs		    "-+"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "e"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Integrator
+		    Name		    "Integrator1"
+		    SID			    "7210"
+		    Ports		    [1, 1]
+		    Position		    [490, 385, 520, 415]
+		    ZOrder		    2150
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux2"
+		    SID			    "7212"
+		    Ports		    [3, 1]
+		    Position		    [595, 324, 630, 416]
+		    ZOrder		    2148
+		    ShowName		    off
+		    Inputs		    "3"
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "lquadr gain"
+		    SID			    "7215"
+		    Position		    [670, 330, 870, 410]
+		    ZOrder		    2147
+		    Gain		    "uavsim.ap.control.lquadr.pitch.K"
+		    Multiplication	    "Matrix(K*u)"
+		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "de"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "de"
+		    SID			    "7216"
+		    Position		    [915, 363, 945, 377]
+		    ZOrder		    -2
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "q"
+		    SrcPort		    1
+		    DstBlock		    "Mux2"
+		    DstPort		    2
+		    }
+		    Line {
+		    Name		    "e"
+		    ZOrder		    2
+		    Labels		    [1, 0]
+		    SrcBlock		    "Add1"
+		    SrcPort		    1
+		    Points		    [25, 0]
+		    Branch {
+		    ZOrder		    3
+		    DstBlock		    "Mux2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    4
+		    Points		    [0, 60]
+		    DstBlock		    "Integrator1"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    ZOrder		    6
+		    SrcBlock		    "theta"
+		    SrcPort		    1
+		    DstBlock		    "Add1"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Mux2"
+		    SrcPort		    1
+		    DstBlock		    "lquadr gain"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "Integrator1"
+		    SrcPort		    1
+		    DstBlock		    "Mux2"
+		    DstPort		    3
+		    }
+		    Line {
+		    Name		    "de"
+		    ZOrder		    11
+		    Labels		    [-1, 0]
+		    SrcBlock		    "lquadr gain"
+		    SrcPort		    1
+		    DstBlock		    "de"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    17
+		    SrcBlock		    "theta_c"
+		    SrcPort		    1
+		    DstBlock		    "Add1"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "LQR roll"
+		  SID			  "7217"
+		  Ports			  [4, 2]
+		  Position		  [905, 1, 1110, 144]
+		  ZOrder		  1772
+		  RequestExecContextInheritance	off
+		  Variant		  off
+		  System {
+		    Name		    "LQR roll"
+		    Location		    [-1347, -3, 3, 843]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "150"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "phi"
+		    SID			    "7218"
+		    Position		    [450, 348, 480, 362]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "phi_c"
+		    SID			    "7219"
+		    Position		    [405, 333, 435, 347]
+		    ZOrder		    1379
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "p"
+		    SID			    "7220"
+		    Position		    [605, 393, 635, 407]
+		    ZOrder		    1380
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "r"
+		    SID			    "7221"
+		    Position		    [605, 443, 635, 457]
+		    ZOrder		    1744
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add1"
+		    SID			    "7222"
+		    Ports		    [2, 1]
+		    Position		    [505, 332, 535, 363]
+		    ZOrder		    1382
+		    ShowName		    off
+		    Inputs		    "-+"
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    Port {
+		    PortNumber		    1
+		    Name		    "e"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    "Demux"
+		    SID			    "7223"
+		    Ports		    [1, 2]
+		    Position		    [815, 421, 820, 459]
+		    ZOrder		    1746
+		    ShowName		    off
+		    Outputs		    "2"
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Integrator
+		    Name		    "Integrator"
+		    SID			    "7224"
+		    Ports		    [1, 1]
+		    Position		    [605, 485, 635, 515]
+		    ZOrder		    1469
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux2"
+		    SID			    "7225"
+		    Ports		    [4, 1]
+		    Position		    [680, 327, 690, 523]
+		    ZOrder		    1743
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Gain
+		    Name		    "lquadr gain"
+		    SID			    "7226"
+		    Position		    [720, 405, 765, 445]
+		    ZOrder		    1742
+		    Gain		    "uavsim.ap.control.lquadr.minimal.K"
+		    Multiplication	    "Matrix(K*u)"
+		    ParamDataTypeStr	    "Inherit: Inherit via internal rule"
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "da"
+		    SID			    "7227"
+		    Position		    [875, 418, 905, 432]
+		    ZOrder		    -2
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "dr"
+		    SID			    "7228"
+		    Position		    [875, 458, 905, 472]
+		    ZOrder		    1745
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "p"
+		    SrcPort		    1
+		    DstBlock		    "Mux2"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "Demux"
+		    SrcPort		    1
+		    Points		    [19, 0; 0, -5]
+		    DstBlock		    "da"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "e"
+		    ZOrder		    3
+		    Labels		    [1, 1]
+		    SrcBlock		    "Add1"
+		    SrcPort		    1
+		    Points		    [29, 0]
+		    Branch {
+		    ZOrder		    4
+		    DstBlock		    "Mux2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    5
+		    Points		    [0, 150]
+		    DstBlock		    "Integrator"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    ZOrder		    6
+		    SrcBlock		    "phi_c"
+		    SrcPort		    1
+		    DstBlock		    "Add1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    7
+		    SrcBlock		    "phi"
+		    SrcPort		    1
+		    DstBlock		    "Add1"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    "Mux2"
+		    SrcPort		    1
+		    DstBlock		    "lquadr gain"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Integrator"
+		    SrcPort		    1
+		    DstBlock		    "Mux2"
+		    DstPort		    4
+		    }
+		    Line {
+		    ZOrder		    10
+		    SrcBlock		    "r"
+		    SrcPort		    1
+		    DstBlock		    "Mux2"
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "lquadr gain"
+		    SrcPort		    1
+		    Points		    [15, 0; 0, 15]
+		    DstBlock		    "Demux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Demux"
+		    SrcPort		    2
+		    Points		    [23, 0; 0, 15]
+		    DstBlock		    "dr"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  SID			  "7340"
+		  Ports			  [4, 1]
+		  Position		  [1315, 0, 1345, 320]
+		  ZOrder		  1114
+		  ShowName		  off
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "u"
+		  SID			  "7351"
+		  Position		  [1400, 153, 1430, 167]
+		  ZOrder		  816
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Ground1"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  4
+		}
+		Line {
+		  FontName		  "Helvetica"
+		  FontSize		  9
+		  FontWeight		  "normal"
+		  FontAngle		  "normal"
+		  ZOrder		  2
+		  SrcBlock		  "q_c"
+		  SrcPort		  1
+		  DstBlock		  "Compute local theta, phi, n_z"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "u"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Demux5"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "<omega_b_rps>"
+		  ZOrder		  5
+		  Labels		  [0, 0]
+		  SrcBlock		  "Bus\nSelector"
+		  SrcPort		  1
+		  DstBlock		  "Demux4"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "Demux5"
+		  SrcPort		  2
+		  Points		  [242, 0; 0, 40]
+		  DstBlock		  "LQR roll"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "Demux4"
+		  SrcPort		  1
+		  Points		  [84, 0; 0, -6; 125, 0; 0, -29]
+		  DstBlock		  "LQR roll"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  10
+		  SrcBlock		  "Demux4"
+		  SrcPort		  3
+		  Points		  [173, 0; 0, -30]
+		  DstBlock		  "LQR roll"
+		  DstPort		  4
+		}
+		Line {
+		  ZOrder		  11
+		  SrcBlock		  "Demux5"
+		  SrcPort		  1
+		  Points		  [40, 0; 0, 315]
+		  DstBlock		  "LQR pitch"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  17
+		  SrcBlock		  "Demux4"
+		  SrcPort		  2
+		  Points		  [7, 0; 0, 70]
+		  DstBlock		  "LQR pitch"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  35
+		  SrcBlock		  "LQR pitch"
+		  SrcPort		  1
+		  Points		  [60, 0; 0, -140]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  21
+		  SrcBlock		  "LQR roll"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  22
+		  SrcBlock		  "LQR roll"
+		  SrcPort		  2
+		  Points		  [46, 0; 0, 90]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  26
+		  SrcBlock		  "AirframeBus"
+		  SrcPort		  1
+		  Points		  [59, 0]
+		  Branch {
+		    ZOrder		    27
+		    Points		    [0, 110]
+		    DstBlock		    "Compute local theta, phi, n_z"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    34
+		    Points		    [0, -45]
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  52
+		  SrcBlock		  "Compute local theta, phi, n_z"
+		  SrcPort		  1
+		  Points		  [43, 0; 0, 10]
+		  DstBlock		  "Demux1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  53
+		  SrcBlock		  "Demux1"
+		  SrcPort		  1
+		  Points		  [18, 0; 0, -80]
+		  DstBlock		  "LQR pitch"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  54
+		  SrcBlock		  "Demux1"
+		  SrcPort		  2
+		  Points		  [271, 0; 0, -340]
+		  DstBlock		  "LQR roll"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "7352"
+	      Ports		      [2, 1]
+	      Position		      [1295, 1066, 1310, 1144]
+	      ZOrder		      1288
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      SID		      "7353"
+	      Ports		      [4, 1]
+	      Position		      [1760, 821, 1810, 914]
+	      ZOrder		      1447
+	      ShowName		      off
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      SID		      "7354"
+	      Ports		      [1, 1]
+	      Position		      [2035, 1010, 2065, 1040]
+	      ZOrder		      1445
+	      InputPortMap	      "u0"
+	      UpperLimit	      "1"
+	      LowerLimit	      "0"
+	      Port {
+		PortNumber		1
+		Name			"den_0to1"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Scope"
+	      SID		      "7355"
+	      Ports		      [1]
+	      Position		      [1725, 1134, 1755, 1166]
+	      ZOrder		      1446
+	      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(ext"
+	      "mgr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration("
+	      "'Sources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Dom"
+	      "ain',true,'SerializedDisplays',{struct('MinYLimReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLi"
+	      "mMag','0.00000','MaxYLimMag','1.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,"
+	      "'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0"
+	      ".0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098"
+	      " 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.07450980"
+	      "39215686 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},"
+	      "'NumLines',4,'LineNames',{{'Constant:1','Constant:2','Constant:3','Channel 4'}},'ShowContent',true,'Placement',"
+	      "1)},'DisplayPropertyDefaults',struct('MinYLimReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLimM"
+	      "ag','0.00000','MaxYLimMag','1.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'A"
+	      "xesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.07450"
+	      "98039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0"
+	      ".274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039"
+	      "215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','"
+	      "Measurements',true,'Version','2015b')),'Version','2015b')"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Trim Inputs"
+	      SID		      "7356"
+	      Position		      [1405, 852, 1665, 888]
+	      ZOrder		      1276
+	      Value		      "uavsim.cularis.u_trim(1:4)"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "no flaps"
+	      SID		      "7357"
+	      Position		      [1940, 1090, 1970, 1120]
+	      ZOrder		      1290
+	      Value		      "0"
+	      Port {
+		PortNumber		1
+		Name			"df_rad"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "u"
+	      SID		      "7358"
+	      Position		      [2315, 938, 2345, 952]
+	      ZOrder		      1279
+	      IconDisplay	      "Port number"
+	      OutDataTypeStr	      "Bus: CMD"
+	    }
+	    Line {
+	      Name		      "df_rad"
+	      ZOrder		      1
+	      Labels		      [1, 1]
+	      SrcBlock		      "no flaps"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator2"
+	      DstPort		      5
+	    }
+	    Line {
+	      ZOrder		      23
+	      SrcBlock		      "delta_en"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Add1"
+	      SrcPort		      1
+	      Points		      [60, 0; 0, -30]
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      Points		      [287, 0]
+	      Branch {
+		ZOrder			5
+		Points			[0, 45]
+		DstBlock		"Scope"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			6
+		Points			[0, -145]
+		DstBlock		"Add1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      FontName		      "Helvetica"
+	      FontSize		      9
+	      FontWeight	      "normal"
+	      FontAngle		      "normal"
+	      ZOrder		      8
+	      SrcBlock		      "q_c"
+	      SrcPort		      1
+	      DstBlock		      "Local rotation angle attitude \ncontrol"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "Plant"
+	      SrcPort		      1
+	      DstBlock		      "Local rotation angle attitude \ncontrol"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      Points		      [28, 0; 0, 10]
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "de_rad"
+	      ZOrder		      12
+	      Labels		      [0, 1]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      DstBlock		      "Bus\nCreator2"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "da_rad"
+	      ZOrder		      13
+	      Labels		      [1, 1]
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator2"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "den_0to1"
+	      ZOrder		      14
+	      Labels		      [0, 1]
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      DstBlock		      "Bus\nCreator2"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "dr_rad"
+	      ZOrder		      15
+	      Labels		      [1, 1]
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Bus\nCreator2"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "CMD"
+	      ZOrder		      16
+	      Labels		      [0, 0]
+	      SrcBlock		      "Bus\nCreator2"
+	      SrcPort		      1
+	      DstBlock		      "u"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      17
+	      SrcBlock		      "Local rotation angle attitude \ncontrol"
+	      SrcPort		      1
+	      DstBlock		      "Add1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "den_0to1"
+	      ZOrder		      18
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Saturation"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      19
+	      SrcBlock		      "Trim Inputs"
+	      SrcPort		      1
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      20
+	      SrcBlock		      "Demux1"
+	      SrcPort		      4
+	      DstBlock		      "Mux1"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      21
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      22
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      DstBlock		      "Mux1"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      24
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "7492"
+	  Position		  [820, 275, 985, 315]
+	  ZOrder		  2485
+	  ShowName		  off
+	  Value			  "uavsim.cularis.phithetapsi0(1)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  SID			  "7384"
+	  Position		  [955, 130, 985, 160]
+	  ZOrder		  2484
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  SID			  "7494"
+	  Position		  [555, 200, 720, 240]
+	  ZOrder		  2486
+	  ShowName		  off
+	  Value			  "uavsim.cularis.phithetapsi0(2)"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  SID			  "7495"
+	  Position		  [1095, 385, 1260, 425]
+	  ZOrder		  2487
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "7434"
+	  Ports			  [3, 1]
+	  Position		  [1025, 110, 1055, 330]
+	  ZOrder		  2006
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Rotation Angles \nto Quaternions1"
+	  SID			  "7437"
+	  Ports			  [1, 1]
+	  Position		  [1230, 199, 1290, 241]
+	  ZOrder		  2007
+	  AttributesFormatString  "Rotation Order: %<rotationOrder>"
+	  LibraryVersion	  "1.436"
+	  SourceBlock		  "aerolibtransform2/Rotation Angles to Quaternions"
+	  SourceType		  "Ang2Quat"
+	  ContentPreviewEnabled	  off
+	  rotationOrder		  "ZYX"
+	}
+	Block {
+	  BlockType		  Step
+	  Name			  "Step"
+	  SID			  "7214"
+	  Position		  [760, 130, 790, 160]
+	  ZOrder		  2489
+	  Time			  "10"
+	  After			  "deg2rad(3)"
+	  SampleTime		  "0"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "7496"
+	  Ports			  [2, 1]
+	  Position		  [895, 165, 915, 185]
+	  ZOrder		  2488
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "|++"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  ZeroOrderHold
+	  Name			  "Zero-Order\nHold"
+	  SID			  "7485"
+	  Position		  [1785, 360, 1820, 390]
+	  ZOrder		  2462
+	  SampleTime		  "uavsim.ap.tsampling_attitudelaws"
+	}
+	Block {
+	  BlockType		  ZeroOrderHold
+	  Name			  "Zero-Order\nHold1"
+	  SID			  "7486"
+	  Position		  [1600, 360, 1635, 390]
+	  ZOrder		  2471
+	  SampleTime		  "uavsim.ap.tsampling_guidancelaws"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "u"
+	  SID			  "7490"
+	  Position		  [1860, 368, 1890, 382]
+	  ZOrder		  2025
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "Zero-Order\nHold"
+	  SrcPort		  1
+	  DstBlock		  "u"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Rotation Angles \nto Quaternions1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "AirframeBus"
+	  SrcPort		  1
+	  DstBlock		  "Attitude laws"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  18
+	  SrcBlock		  "Attitude laws"
+	  SrcPort		  1
+	  DstBlock		  "Zero-Order\nHold"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  62
+	  SrcBlock		  "Rotation Angles \nto Quaternions1"
+	  SrcPort		  1
+	  Points		  [151, 0; 0, 155]
+	  DstBlock		  "Zero-Order\nHold1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  33
+	  SrcBlock		  "Zero-Order\nHold1"
+	  SrcPort		  1
+	  DstBlock		  "Attitude laws"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  50
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  55
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  60
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  Points		  [180, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  58
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  Points		  [163, 0; 0, 20]
+	  DstBlock		  "Attitude laws"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  59
+	  SrcBlock		  "Step"
+	  SrcPort		  1
+	  Points		  [48, 0; 0, 30]
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  61
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  Points		  [13, 0; 0, 45]
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
       }
     }
     Block {
@@ -3155,10 +4886,10 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "UAV"
-      SID		      "7111"
+      SID		      "7493"
       Ports		      [1, 2]
-      Position		      [755, 377, 1085, 613]
-      ZOrder		      2002
+      Position		      [870, 427, 1200, 663]
+      ZOrder		      2006
       ForegroundColor	      "red"
       BackgroundColor	      "yellow"
       LibraryVersion	      "1.1175"
@@ -3180,53 +4911,18 @@ Model {
       aircraftmask_displayVortices off
     }
     Line {
-      Name		      "da_rad"
-      ZOrder		      555
-      Labels		      [1, 0]
-      SrcBlock		      "Constant"
+      ZOrder		      561
+      SrcBlock		      "UAV"
       SrcPort		      1
-      DstBlock		      "Bus Object Bus Creator"
+      Points		      [23, 0; 0, -83; -554, 0; 0, 143]
+      DstBlock		      "Controllers"
       DstPort		      1
     }
     Line {
-      Name		      "de_rad"
-      ZOrder		      556
-      Labels		      [1, 1]
-      SrcBlock		      "Constant1"
-      SrcPort		      1
-      DstBlock		      "Bus Object Bus Creator"
-      DstPort		      2
-    }
-    Line {
-      Name		      "dr_rad"
-      ZOrder		      557
-      Labels		      [1, 1]
-      SrcBlock		      "Constant2"
-      SrcPort		      1
-      DstBlock		      "Bus Object Bus Creator"
-      DstPort		      3
-    }
-    Line {
-      Name		      "den_0to1"
-      ZOrder		      558
-      Labels		      [1, 1]
-      SrcBlock		      "Constant3"
-      SrcPort		      1
-      DstBlock		      "Bus Object Bus Creator"
-      DstPort		      4
-    }
-    Line {
-      Name		      "df_rad"
-      ZOrder		      559
-      Labels		      [1, 1]
-      SrcBlock		      "Constant4"
-      SrcPort		      1
-      DstBlock		      "Bus Object Bus Creator"
-      DstPort		      5
-    }
-    Line {
+      Name		      "u_c"
       ZOrder		      560
-      SrcBlock		      "Bus Object Bus Creator"
+      Labels		      [1, 1]
+      SrcBlock		      "Controllers"
       SrcPort		      1
       DstBlock		      "UAV"
       DstPort		      1
@@ -3291,7 +4987,7 @@ MatData {
 Stateflow {
   machine {
     id			    1
-    name		    "ffb_Cularis_openloop"
+    name		    "ffb_Cularis_attitudeloopclosed"
     created		    "20-Feb-2014 19:03:23"
     isLibrary		    0
     firstTarget		    2

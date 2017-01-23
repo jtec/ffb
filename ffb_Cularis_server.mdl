@@ -9,7 +9,7 @@ Model {
     ParameterArgumentNames  ""
     ComputedModelVersion    "1.10275"
     NumModelReferences	    0
-    NumTestPointedSignals   15
+    NumTestPointedSignals   9
     TestPointedSignal {
       SignalName	      "dp_e_g"
       FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#2/Controllers/Compute error  measures/Add"
@@ -63,28 +63,6 @@ Model {
       Decimation	      2
     }
     TestPointedSignal {
-      SignalName	      "u_c"
-      FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#3/UAV/u"
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
-      SignalName	      "airframebus"
-      FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#3/UAV/Cularis UAS"
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
-      SignalName	      "u_eff"
-      FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#3/UAV/Cularis UAS"
-      PortIndex		      2
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
       SignalName	      "dp_e_g"
       FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#4/Controllers/Compute error  measures/Add"
       LogSignal		      1
@@ -95,28 +73,6 @@ Model {
       SignalName	      "dv_e_g"
       FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#4/Controllers/Compute error  measures/Relati"
       "ve velocity vector in g frame"
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
-      SignalName	      "u_c"
-      FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#4/UAV/u"
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
-      SignalName	      "airframebus"
-      FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#4/UAV/Cularis UAS"
-      LogSignal		      1
-      MaxPoints		      5000
-      Decimation	      2
-    }
-    TestPointedSignal {
-      SignalName	      "u_eff"
-      FullBlockPath	      "ffb_Cularis_server/Closed loop Cularis UAS, ID#4/UAV/Cularis UAS"
-      PortIndex		      2
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
@@ -155,30 +111,18 @@ Model {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[0]
+	Visible			[1]
       }
-      Array {
-	Type			"Simulink.EditorInfo"
-	Dimension		2
-	Object {
-	  $ObjectID		  5
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkTopLevel"
-	  LoadSaveID		  "0"
-	  Extents		  [1629.0, 1010.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [388.11033869683581, 176.9028775473472]
-	}
-	Object {
-	  $ObjectID		  6
-	  IsActive		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "7107:5201"
-	  Extents		  [1680.0, 1165.0]
-	  ZoomFactor		  [1.7499999999999998]
-	  Offset		  [-49.57096033192704, 303.75455264791037]
-	}
-	PropName		"EditorsInfo"
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"7107:4954"
+	Extents			[1629.0, 974.0]
+	ZoomFactor		[1.75]
+	Offset			[1196.9229820002995, 139.46765490826886]
       }
     }
   }
@@ -188,7 +132,7 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "j.bolting"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Nov 03 18:57:35 2016"
+  LastModifiedDate	  "Mon Jan 23 15:13:58 2017"
   RTWModifiedTimeStamp	  400100254
   ModelVersionFormat	  "1.%<AutoIncrement:10275>"
   ConfigurationManager	  "none"
@@ -232,7 +176,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    7
+    $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "Mission_single_cularis"
     overrideMode_	    [0.0]
@@ -276,13 +220,13 @@ Model {
     Type		    "Handle"
     Dimension		    4
     Simulink.ConfigSet {
-      $ObjectID		      8
+      $ObjectID		      7
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  9
+	  $ObjectID		  8
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "20"
@@ -319,7 +263,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  10
+	  $ObjectID		  9
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -355,7 +299,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  11
+	  $ObjectID		  10
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -412,7 +356,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  12
+	  $ObjectID		  11
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -502,7 +446,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  13
+	  $ObjectID		  12
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -542,7 +486,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  14
+	  $ObjectID		  13
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -558,7 +502,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  15
+	  $ObjectID		  14
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -570,7 +514,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  16
+	  $ObjectID		  15
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -641,7 +585,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      17
+	      $ObjectID		      16
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -711,7 +655,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      18
+	      $ObjectID		      17
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -798,7 +742,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  19
+	  $ObjectID		  18
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -825,7 +769,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  20
+	  $ObjectID		  19
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -837,7 +781,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      21
+	      $ObjectID		      20
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -870,14 +814,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      22
+	      $ObjectID		      21
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  23
+		  $ObjectID		  22
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -892,7 +836,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  24
+		  $ObjectID		  23
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -923,13 +867,13 @@ Model {
       ConfigPrmDlgPosition     [ 420, 24, 1532, 904 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      25
+      $ObjectID		      24
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  26
+	  $ObjectID		  25
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "25"
@@ -966,7 +910,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  27
+	  $ObjectID		  26
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -1002,7 +946,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  28
+	  $ObjectID		  27
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1059,7 +1003,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  29
+	  $ObjectID		  28
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1149,7 +1093,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  30
+	  $ObjectID		  29
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1189,7 +1133,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  31
+	  $ObjectID		  30
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -1205,7 +1149,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  32
+	  $ObjectID		  31
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -1217,7 +1161,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  33
+	  $ObjectID		  32
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1288,7 +1232,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      34
+	      $ObjectID		      33
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -1358,7 +1302,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      35
+	      $ObjectID		      34
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -1445,7 +1389,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  36
+	  $ObjectID		  35
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -1472,7 +1416,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  37
+	  $ObjectID		  36
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1484,7 +1428,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      38
+	      $ObjectID		      37
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -1517,14 +1461,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      39
+	      $ObjectID		      38
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  40
+		  $ObjectID		  39
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -1539,7 +1483,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  41
+		  $ObjectID		  40
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -1570,13 +1514,13 @@ Model {
       ConfigPrmDlgPosition     [ 420, 24, 1532, 904 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      42
+      $ObjectID		      41
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  43
+	  $ObjectID		  42
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "100"
@@ -1613,7 +1557,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  44
+	  $ObjectID		  43
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -1649,7 +1593,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  45
+	  $ObjectID		  44
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1706,7 +1650,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  46
+	  $ObjectID		  45
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -1796,7 +1740,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  47
+	  $ObjectID		  46
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -1836,7 +1780,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  48
+	  $ObjectID		  47
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -1852,7 +1796,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  49
+	  $ObjectID		  48
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -1864,7 +1808,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  50
+	  $ObjectID		  49
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -1936,7 +1880,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      51
+	      $ObjectID		      50
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -2008,7 +1952,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      52
+	      $ObjectID		      51
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -2095,7 +2039,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  53
+	  $ObjectID		  52
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -2122,7 +2066,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  54
+	  $ObjectID		  53
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2134,7 +2078,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      55
+	      $ObjectID		      54
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -2167,14 +2111,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      56
+	      $ObjectID		      55
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  57
+		  $ObjectID		  56
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -2189,7 +2133,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  58
+		  $ObjectID		  57
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -2221,13 +2165,13 @@ Model {
       ConfigPrmDlgPosition     [ 291, 102, 1377, 794 ] 
     }
     Simulink.ConfigSet {
-      $ObjectID		      59
+      $ObjectID		      58
       Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  60
+	  $ObjectID		  59
 	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "uavsim.simConfig.tsim"
@@ -2264,7 +2208,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  61
+	  $ObjectID		  60
 	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -2300,7 +2244,7 @@ Model {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  62
+	  $ObjectID		  61
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2357,7 +2301,7 @@ Model {
 	  AccelVerboseBuild	  off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  63
+	  $ObjectID		  62
 	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -2447,7 +2391,7 @@ Model {
 	  IntegerSaturationMsg	  "warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  64
+	  $ObjectID		  63
 	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -2487,7 +2431,7 @@ Model {
 	  ProdEqTarget		  off
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  65
+	  $ObjectID		  64
 	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDate"
 	  EnableRefExpFcnMdlSchedulingChecks on
@@ -2503,7 +2447,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  66
+	  $ObjectID		  65
 	  Version		  "1.15.1"
 	  SFSimEcho		  off
 	  SimCtrlC		  on
@@ -2515,7 +2459,7 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  67
+	  $ObjectID		  66
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2584,7 +2528,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      68
+	      $ObjectID		      67
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -2659,7 +2603,7 @@ Model {
 	    }
 	    Simulink.RaccelTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      69
+	      $ObjectID		      68
 	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
@@ -2744,7 +2688,7 @@ Model {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  70
+	  $ObjectID		  69
 	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
@@ -2771,7 +2715,7 @@ Model {
 	  CovStopTime		  0
 	}
 	SSC.SimscapeCC {
-	  $ObjectID		  71
+	  $ObjectID		  70
 	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
@@ -2783,7 +2727,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    MECH.SimMechanicsCC {
-	      $ObjectID		      72
+	      $ObjectID		      71
 	      Version		      "1.15.1"
 	      Name		      "SimMechanics"
 	      WarnOnRedundantConstraints on
@@ -2816,14 +2760,14 @@ Model {
 	      OVRRIDBodyVisualizationType "NONE"
 	    }
 	    simmechanics.ConfigurationSet {
-	      $ObjectID		      73
+	      $ObjectID		      72
 	      Version		      "1.15.1"
 	      Description	      "SimMechanics 2G"
 	      Array {
 		Type			"Handle"
 		Dimension		2
 		simmechanics.DiagnosticsConfigSet {
-		  $ObjectID		  74
+		  $ObjectID		  73
 		  Version		  "1.15.1"
 		  Description		  "Diagnostics"
 		  Name			  "DiagnosticsConfigSet"
@@ -2838,7 +2782,7 @@ Model {
 		  SimMechanicsJointTargetOverSpecification "error"
 		}
 		simmechanics.ExplorerConfigSet {
-		  $ObjectID		  75
+		  $ObjectID		  74
 		  Version		  "1.15.1"
 		  Description		  "Explorer"
 		  Name			  "ExplorerConfigSet"
@@ -2873,11 +2817,11 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    59
+    $ObjectID		    58
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    76
+    $ObjectID		    75
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -3142,7 +3086,7 @@ Model {
   System {
     Name		    "ffb_Cularis_server"
     Location		    [-3, 0, 1341, 932]
-    Open		    on
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -3165,7 +3109,7 @@ Model {
       ZOrder		      2001
       ForegroundColor	      "red"
       BackgroundColor	      "yellow"
-      LibraryVersion	      "1.1271"
+      LibraryVersion	      "1.1275"
       SourceBlock	      "uavsimblockset/Closed loop Cularis UAS 1"
       SourceType	      ""
       ContentPreviewEnabled   off
@@ -3180,7 +3124,7 @@ Model {
       ZOrder		      2003
       ForegroundColor	      "red"
       BackgroundColor	      "yellow"
-      LibraryVersion	      "1.1271"
+      LibraryVersion	      "1.1275"
       SourceBlock	      "uavsimblockset/Closed loop Cularis UAS 1"
       SourceType	      ""
       ContentPreviewEnabled   off
@@ -3195,7 +3139,7 @@ Model {
       ZOrder		      2004
       ForegroundColor	      "red"
       BackgroundColor	      "yellow"
-      LibraryVersion	      "1.1271"
+      LibraryVersion	      "1.1275"
       SourceBlock	      "uavsimblockset/Closed loop Cularis UAS 1"
       SourceType	      ""
       ContentPreviewEnabled   off
@@ -3232,7 +3176,7 @@ Model {
       Variant		      off
       Object {
 	$PropName		"MaskObject"
-	$ObjectID		77
+	$ObjectID		76
 	$ClassName		"Simulink.Mask"
 	SelfModifiable		"on"
 	Display			"% Set Icon:\n%image(imread('images/cularis.png'), [.2, .2, .6, .6])\n"
@@ -3243,28 +3187,28 @@ Model {
 	  Type			  "Simulink.MaskParameter"
 	  Dimension		  12
 	  Object {
-	    $ObjectID		    78
+	    $ObjectID		    77
 	    Type		    "edit"
 	    Name		    "aircraftmask_phithetapsi0"
 	    Prompt		    "Initial Euler angles [rad]"
 	    Value		    "uavsim.formation(1).phithetapsi0"
 	  }
 	  Object {
-	    $ObjectID		    79
+	    $ObjectID		    78
 	    Type		    "edit"
 	    Name		    "aircraftmask_p0_NED_m"
 	    Prompt		    "Initial position, NED frame [m]"
 	    Value		    "uavsim.formation(1).p0_NED'"
 	  }
 	  Object {
-	    $ObjectID		    80
+	    $ObjectID		    79
 	    Type		    "edit"
 	    Name		    "aircraftmask_originNED_ECEF_rrm"
 	    Prompt		    "Origin NED frame. ECEF, [rad rad m]"
 	    Value		    "uavsim.originNED_ECEF_radradm"
 	  }
 	  Object {
-	    $ObjectID		    81
+	    $ObjectID		    80
 	    Type		    "edit"
 	    Name		    "aircraftmask_pqr0"
 	    Prompt		    "Initial rotation rates, body frame [rad/s]"
@@ -3272,56 +3216,56 @@ Model {
 	    Tunable		    "off"
 	  }
 	  Object {
-	    $ObjectID		    82
+	    $ObjectID		    81
 	    Type		    "edit"
 	    Name		    "aircraftmask_uvw0"
 	    Prompt		    "Initial velocity, body frame [m/s]"
 	    Value		    "uavsim.formation(1).uvw0"
 	  }
 	  Object {
-	    $ObjectID		    83
+	    $ObjectID		    82
 	    Type		    "edit"
 	    Name		    "aircraftmask_phithetapsi_trim"
 	    Prompt		    "Trim Euler angles [rad]"
 	    Value		    "uavsim.formation(1).phithetapsi0"
 	  }
 	  Object {
-	    $ObjectID		    84
+	    $ObjectID		    83
 	    Type		    "edit"
 	    Name		    "aircraftmask_ID"
 	    Prompt		    "Aircraft ID"
 	    Value		    "1"
 	  }
 	  Object {
-	    $ObjectID		    85
+	    $ObjectID		    84
 	    Type		    "checkbox"
 	    Name		    "aircraftmask_wakevortexenabled"
 	    Prompt		    "Wake vortex interaction enabled"
 	    Value		    "on"
 	  }
 	  Object {
-	    $ObjectID		    86
+	    $ObjectID		    85
 	    Type		    "edit"
 	    Name		    "aircraftmask_navigationLaw"
 	    Prompt		    "Active navigation law (-1: automatic selection)"
 	    Value		    "-1"
 	  }
 	  Object {
-	    $ObjectID		    87
+	    $ObjectID		    86
 	    Type		    "edit"
 	    Name		    "uavsim"
 	    Prompt		    "Parameter set"
 	    Value		    "uavsim"
 	  }
 	  Object {
-	    $ObjectID		    88
+	    $ObjectID		    87
 	    Type		    "edit"
 	    Name		    "leaderID"
 	    Prompt		    "Follows which ID?"
 	    Value		    "0"
 	  }
 	  Object {
-	    $ObjectID		    89
+	    $ObjectID		    88
 	    Type		    "checkbox"
 	    Name		    "airkraftmask_displayLeader"
 	    Prompt		    "Display virtual leader"
@@ -3457,7 +3401,7 @@ Model {
 	      InheritFromInputs	      on
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		90
+		$ObjectID		89
 		$ClassName		"Simulink.Mask"
 		Type			"BUS OBJECT Bus Creator"
 		Description		"Provides users the cabability to painlessly, instantly customize bus creators of output data type 'Bus"
@@ -3469,7 +3413,7 @@ Model {
 		"he Model menu.) for every placed instance of the block."
 		Object {
 		  $PropName		  "Parameters"
-		  $ObjectID		  91
+		  $ObjectID		  90
 		  $ClassName		  "Simulink.MaskParameter"
 		  Type			  "popup"
 		  Array {
@@ -3544,11 +3488,11 @@ Model {
 		  Type			  "Simulink.dialog.Group"
 		  Dimension		  2
 		  Object {
-		    $ObjectID		    92
+		    $ObjectID		    91
 		    Prompt		    "%<MaskType>"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    93
+		    $ObjectID		    92
 		    $ClassName		    "Simulink.dialog.Text"
 		    Prompt		    "%<MaskDescription>"
 		    Name		    "DescTextVar"
@@ -3556,18 +3500,18 @@ Model {
 		    Name		    "DescGroupVar"
 		  }
 		  Object {
-		    $ObjectID		    94
+		    $ObjectID		    93
 		    Prompt		    "Simulink:studio:ToolBarParametersMenu"
 		    Array {
 		    Type		    "Simulink.dialog.Control"
 		    Dimension		    2
 		    Object {
-		    $ObjectID		    95
+		    $ObjectID		    94
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    Name		    "busType"
 		    }
 		    Object {
-		    $ObjectID		    96
+		    $ObjectID		    95
 		    $ClassName		    "Simulink.dialog.Button"
 		    Prompt		    "Apply Selection"
 		    Callback		    "% Using variable names terminated with \"_BOBC\" to lessen the chances of\n% collisions with exis"
@@ -4053,11 +3997,11 @@ Model {
 	      Variant		      off
 	      Object {
 		$PropName		"MaskObject"
-		$ObjectID		97
+		$ObjectID		96
 		$ClassName		"Simulink.Mask"
 		Object {
 		  $PropName		  "Parameters"
-		  $ObjectID		  98
+		  $ObjectID		  97
 		  $ClassName		  "Simulink.MaskParameter"
 		  Type			  "popup"
 		  Array {
@@ -4078,11 +4022,11 @@ Model {
 		  Type			  "Simulink.dialog.Group"
 		  Dimension		  2
 		  Object {
-		    $ObjectID		    99
+		    $ObjectID		    98
 		    Prompt		    "%<MaskType>"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    100
+		    $ObjectID		    99
 		    $ClassName		    "Simulink.dialog.Text"
 		    Prompt		    "%<MaskDescription>"
 		    Name		    "DescTextVar"
@@ -4090,11 +4034,11 @@ Model {
 		    Name		    "DescGroupVar"
 		  }
 		  Object {
-		    $ObjectID		    101
+		    $ObjectID		    100
 		    Prompt		    "Simulink:studio:ToolBarParametersMenu"
 		    Object {
 		    $PropName		    "DialogControls"
-		    $ObjectID		    102
+		    $ObjectID		    101
 		    $ClassName		    "Simulink.dialog.parameter.Popup"
 		    PromptLocation	    "top"
 		    Name		    "mask_3dmodel"
@@ -4640,11 +4584,11 @@ Model {
 	  Variant		  off
 	  Object {
 	    $PropName		    "MaskObject"
-	    $ObjectID		    103
+	    $ObjectID		    102
 	    $ClassName		    "Simulink.Mask"
 	    Object {
 	      $PropName		      "Parameters"
-	      $ObjectID		      104
+	      $ObjectID		      103
 	      $ClassName	      "Simulink.MaskParameter"
 	      Type		      "popup"
 	      Array {
@@ -4665,11 +4609,11 @@ Model {
 	      Type		      "Simulink.dialog.Group"
 	      Dimension		      2
 	      Object {
-		$ObjectID		105
+		$ObjectID		104
 		Prompt			"%<MaskType>"
 		Object {
 		  $PropName		  "DialogControls"
-		  $ObjectID		  106
+		  $ObjectID		  105
 		  $ClassName		  "Simulink.dialog.Text"
 		  Prompt		  "%<MaskDescription>"
 		  Name			  "DescTextVar"
@@ -4677,11 +4621,11 @@ Model {
 		Name			"DescGroupVar"
 	      }
 	      Object {
-		$ObjectID		107
+		$ObjectID		106
 		Prompt			"Simulink:studio:ToolBarParametersMenu"
 		Object {
 		  $PropName		  "DialogControls"
-		  $ObjectID		  108
+		  $ObjectID		  107
 		  $ClassName		  "Simulink.dialog.parameter.Popup"
 		  PromptLocation	  "top"
 		  Name			  "mask_3dmodel"
