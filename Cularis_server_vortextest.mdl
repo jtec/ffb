@@ -1,5 +1,5 @@
 Model {
-  Name			  "Cularis_server_vortexdebug"
+  Name			  "Cularis_server_vortextest"
   Version		  8.6
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
@@ -7,35 +7,42 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.10272"
+    ComputedModelVersion    "1.10273"
     NumModelReferences	    0
-    NumTestPointedSignals   8
+    NumTestPointedSignals   10
     TestPointedSignal {
       SignalName	      "dp_e_g"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#2/Controllers/Compute error  measure"
-      "s/Add"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#2/Controllers/Compute error  measures"
+      "/Add"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "dv_e_g"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#2/Controllers/Compute error  measure"
-      "s/Relative velocity vector in g frame"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#2/Controllers/Compute error  measures"
+      "/Relative velocity vector in g frame"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "u_c"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#2/UAV/u"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#2/UAV/u"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "airframebus"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#2/UAV/Cularis UAS"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "u_eff"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#2/UAV/Cularis UAS"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#2/UAV/Cularis UAS"
       PortIndex		      2
       LogSignal		      1
       MaxPoints		      5000
@@ -43,30 +50,37 @@ Model {
     }
     TestPointedSignal {
       SignalName	      "dp_e_g"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#3/Controllers/Compute error  measure"
-      "s/Add"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#3/Controllers/Compute error  measures"
+      "/Add"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "dv_e_g"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#3/Controllers/Compute error  measure"
-      "s/Relative velocity vector in g frame"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#3/Controllers/Compute error  measures"
+      "/Relative velocity vector in g frame"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "u_c"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#3/UAV/u"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#3/UAV/u"
+      LogSignal		      1
+      MaxPoints		      5000
+      Decimation	      2
+    }
+    TestPointedSignal {
+      SignalName	      "airframebus"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#3/UAV/Cularis UAS"
       LogSignal		      1
       MaxPoints		      5000
       Decimation	      2
     }
     TestPointedSignal {
       SignalName	      "u_eff"
-      FullBlockPath	      "Cularis_server_vortexdebug/Closed loop Cularis UAS, ID#3/UAV/Cularis UAS"
+      FullBlockPath	      "Cularis_server_vortextest/Closed loop Cularis UAS, ID#3/UAV/Cularis UAS"
       PortIndex		      2
       LogSignal		      1
       MaxPoints		      5000
@@ -91,7 +105,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [414.0, 97.0, 856.0, 932.0]
+      Location		      [244.0, 113.0, 856.0, 854.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -100,7 +114,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[58]
+	Filter			[59]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -116,18 +130,18 @@ Model {
 	  IsActive		  [0]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1019.0, 975.0]
-	  ZoomFactor		  [1.4999999999999993]
-	  Offset		  [401.17483529553328, 239.94287754734705]
+	  Extents		  [1019.0, 873.0]
+	  ZoomFactor		  [1.4999999999999991]
+	  Offset		  [401.17483529553334, 239.94287754734711]
 	}
 	Object {
 	  $ObjectID		  6
 	  IsActive		  [1]
 	  ViewObjType		  "SimulinkSubsys"
 	  LoadSaveID		  "7107:5171"
-	  Extents		  [1019.0, 971.0]
-	  ZoomFactor		  [1.0]
-	  Offset		  [1.5333333333329906, 129.35368853930117]
+	  Extents		  [1019.0, 873.0]
+	  ZoomFactor		  [0.99999999999999989]
+	  Offset		  [18.33333333333286, 166.15368853930113]
 	}
 	PropName		"EditorsInfo"
       }
@@ -139,9 +153,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "j.bolting"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jun 08 12:18:25 2016"
-  RTWModifiedTimeStamp	  387210892
-  ModelVersionFormat	  "1.%<AutoIncrement:10272>"
+  LastModifiedDate	  "Mon Jan 23 14:19:13 2017"
+  RTWModifiedTimeStamp	  407081952
+  ModelVersionFormat	  "1.%<AutoIncrement:10273>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -3191,8 +3205,8 @@ Model {
     }
   }
   System {
-    Name		    "Cularis_server_vortexdebug"
-    Location		    [414, 97, 1270, 1029]
+    Name		    "Cularis_server_vortextest"
+    Location		    [244, 113, 1100, 967]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -4919,7 +4933,7 @@ Model {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
 		    SID			    "7107:5205::185"
-		    Tag			    "Stateflow S-Function Cularis_server_vortexdebug 4"
+		    Tag			    "Stateflow S-Function Cularis_server_vortextest 4"
 		    Ports		    [1, 3]
 		    Position		    [180, 100, 230, 180]
 		    ZOrder		    144
@@ -6516,7 +6530,7 @@ Model {
 	      Variant		      off
 	      System {
 		Name			"Subsystem"
-		Location		[414, 97, 1270, 1029]
+		Location		[244, 113, 1100, 967]
 		Open			on
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
@@ -6640,7 +6654,7 @@ Model {
 		    BlockType		    S-Function
 		    Name		    " SFunction "
 		    SID			    "7107:5042::183"
-		    Tag			    "Stateflow S-Function Cularis_server_vortexdebug 2"
+		    Tag			    "Stateflow S-Function Cularis_server_vortextest 2"
 		    Ports		    [1, 2]
 		    Position		    [180, 100, 230, 160]
 		    ZOrder		    159
@@ -6931,10 +6945,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  3
 		  SrcBlock		  "p_c_NED"
 		  SrcPort		  1
@@ -6942,10 +6952,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  4
 		  SrcBlock		  "get p_c of this\nUAS"
 		  SrcPort		  1
@@ -7029,10 +7035,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  15
 		  SrcBlock		  "Constant2"
 		  SrcPort		  1
@@ -7040,10 +7042,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  16
 		  SrcBlock		  "Sum6"
 		  SrcPort		  1
@@ -7069,10 +7067,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  20
 		  SrcBlock		  "DCM_eg"
 		  SrcPort		  1
@@ -7091,12 +7085,10 @@ Model {
 		  }
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
-		  ZOrder		  63
-		  Points		  [380, 430; 0, 0; 100, 0]
+		  ZOrder		  75
+		  SrcBlock		  "Separation vectors in the local guidance frame"
+		  SrcPort		  1
+		  Points		  [63, 0; 0, 25]
 		  DstBlock		  "get desired separation\nvector in g frame"
 		  DstPort		  1
 		}
@@ -7108,10 +7100,6 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  25
 		  SrcBlock		  "get desired separation\nvector in g frame"
 		  SrcPort		  1
@@ -7135,10 +7123,6 @@ Model {
 		  DstPort		  2
 		}
 		Line {
-		  FontName		  "Helvetica"
-		  FontSize		  9
-		  FontWeight		  "normal"
-		  FontAngle		  "normal"
 		  ZOrder		  28
 		  SrcBlock		  "id"
 		  SrcPort		  1
@@ -7357,7 +7341,7 @@ Model {
 		  Ports			  [14, 0, 1]
 		  Position		  [635, 403, 765, 807]
 		  ZOrder		  1113
-		  LibraryVersion	  "1.1149"
+		  LibraryVersion	  "1.1150"
 		  SourceBlock		  "uavsimBlockset_UAV3DInterface/UAV3D interface"
 		  SourceType		  ""
 		  ContentPreviewEnabled	  off
@@ -7905,7 +7889,7 @@ Model {
 	  ZOrder		  1950
 	  ForegroundColor	  "red"
 	  BackgroundColor	  "yellow"
-	  LibraryVersion	  "1.1173"
+	  LibraryVersion	  "1.1174"
 	  SourceBlock		  "uavsimBlockset_Cularis_withUAV3D/UAV A"
 	  SourceType		  ""
 	  ContentPreviewEnabled	  off
@@ -8252,7 +8236,7 @@ Model {
 		  Type			  "popup"
 		  Array {
 		    Type		    "Cell"
-		    Dimension		    36
+		    Dimension		    35
 		    Cell		    "Bus: AHRS"
 		    Cell		    "Bus: Acceleration"
 		    Cell		    "Bus: Aero"
@@ -8283,7 +8267,6 @@ Model {
 		    Cell		    "Bus: VortexParameterBus"
 		    Cell		    "Bus: VortexStates"
 		    Cell		    "Bus: WindAngles"
-		    Cell		    "Bus: ans"
 		    Cell		    "Bus: iUAScom"
 		    Cell		    "Bus: svm_bus_d_exo"
 		    Cell		    "Bus: svm_bus_u"
@@ -8561,7 +8544,7 @@ Model {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
 		  SID			  "6934:11048::16"
-		  Tag			  "Stateflow S-Function Cularis_server_vortexdebug 3"
+		  Tag			  "Stateflow S-Function Cularis_server_vortextest 3"
 		  Ports			  [4, 3]
 		  Position		  [180, 102, 230, 203]
 		  ZOrder		  7
@@ -8975,7 +8958,7 @@ Model {
 		  Ports			  [14, 0, 1]
 		  Position		  [635, 403, 765, 807]
 		  ZOrder		  1113
-		  LibraryVersion	  "1.1149"
+		  LibraryVersion	  "1.1150"
 		  SourceBlock		  "uavsimBlockset_UAV3DInterface/UAV3D interface"
 		  SourceType		  ""
 		  ContentPreviewEnabled	  off
@@ -10073,7 +10056,7 @@ MatData {
 Stateflow {
   machine {
     id			    1
-    name		    "Cularis_server_vortexdebug"
+    name		    "Cularis_server_vortextest"
     created		    "20-Feb-2014 19:03:23"
     isLibrary		    0
     firstTarget		    30
@@ -10090,8 +10073,6 @@ Stateflow {
     firstJunction	    7
     viewObj		    2
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
@@ -10464,8 +10445,6 @@ Stateflow {
     firstJunction	    27
     viewObj		    21
     machine		    1
-    subviewS {
-    }
     ssIdHighWaterMark	    8
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
